@@ -1,117 +1,704 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta name="google-site-verification" content="w3L_tX7eXYQr5YrKW94ATdUyNbT55f-J1jYmE580vnA" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Amin Khademi - Environmental Engineer, Python Developer and Researcher in Atmospheric Dispersion Modelling, Methane Emissions and Scientific Computing.">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="w3L_tX7eXYQr5YrKW94ATdUyNbT55f-J1jYmE580vnA" />
+
+    <meta name="description" content="Amin Khademi, MSc Environmental Engineering graduate from the University of Tehran. Research interests include atmospheric dispersion modelling, methane emissions, air pollution, satellite remote sensing and computational environmental science.">
+
     <meta name="author" content="Amin Khademi">
-    <title>Amin Khademi | Research & Engineering Portfolio</title>
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://amin-khademi-ut.github.io/">
+
+    <meta property="og:title" content="Amin Khademi | Academic Research Portfolio">
+    <meta property="og:description" content="Environmental Engineering, Atmospheric Modelling, Methane Emissions and Computational Environmental Science.">
+    <meta property="og:url" content="https://amin-khademi-ut.github.io/">
+    <meta property="og:type" content="website">
+
+    <title>Amin Khademi | Academic Research Portfolio</title>
+
     <style>
-        * { box-sizing: border-box; }
-        body {
+        :root {
+            --navy: #13283f;
+            --blue: #2878a8;
+            --light-blue: #eaf2f8;
+            --text: #263747;
+            --muted: #687888;
+            --border: #dce4eb;
+            --white: #ffffff;
+            --background: #f6f8fb;
+        }
+
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0d1117;
-            color: #e6edf3;
-            line-height: 1.7;
+            padding: 0;
+            box-sizing: border-box;
         }
-        header {
-            padding: 75px 20px;
-            text-align: center;
-            background: #161b22;
+
+        html {
+            scroll-behavior: smooth;
         }
-        header h1 { font-size: 42px; margin-bottom: 10px; }
-        header p { color: #9da7b3; font-size: 18px; }
-        nav { margin-top: 25px; }
-        nav a, .button {
-            color: #58a6ff;
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--background);
+            line-height: 1.75;
+        }
+
+        a {
+            color: var(--blue);
             text-decoration: none;
-            margin: 10px;
         }
-        main { max-width: 950px; margin: auto; padding: 35px 20px; }
-        section { margin-bottom: 50px; }
-        h2 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
-        .project {
-            background: #161b22;
-            border: 1px solid #30363d;
-            padding: 22px;
-            margin: 18px 0;
-            border-radius: 10px;
+
+        a:hover {
+            text-decoration: underline;
         }
-        .project a { color: #58a6ff; text-decoration: none; }
-        .tag {
-            display: inline-block;
-            background: #212b3a;
-            color: #79c0ff;
-            padding: 4px 10px;
-            border-radius: 5px;
-            margin: 4px;
+
+        .container {
+            width: min(1080px, 90%);
+            margin: auto;
+        }
+
+        /* Navigation */
+
+        nav {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            min-height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 19px;
+            font-weight: bold;
+            color: var(--navy);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+            list-style: none;
             font-size: 13px;
         }
+
+        .nav-links a {
+            color: var(--text);
+        }
+
+        /* Hero */
+
+        .hero {
+            background: var(--navy);
+            color: white;
+            padding: 90px 0 85px;
+        }
+
+        .hero-label {
+            color: #9bc8e5;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 55px);
+            margin: 18px 0 12px;
+            line-height: 1.2;
+        }
+
+        .hero h2 {
+            font-size: 20px;
+            font-weight: normal;
+            color: #c5d9e9;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 760px;
+            color: #d5e0ea;
+            font-size: 16px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 22px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--navy);
+        }
+
+        .btn-outline {
+            border: 1px solid #9db7ca;
+            color: white;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 65px 0;
+            scroll-margin-top: 75px;
+        }
+
+        .section-title {
+            color: var(--navy);
+            font-size: 27px;
+            margin-bottom: 9px;
+        }
+
+        .section-subtitle {
+            color: var(--muted);
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .about-text {
+            max-width: 880px;
+            font-size: 15px;
+        }
+
+        /* Research Interests */
+
+        .interests {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .interest {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 23px;
+            border-radius: 7px;
+        }
+
+        .interest h3 {
+            color: var(--navy);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .interest p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* Education */
+
+        .education-card {
+            background: white;
+            padding: 27px;
+            border-left: 4px solid var(--blue);
+            border-radius: 5px;
+        }
+
+        .education-card h3 {
+            color: var(--navy);
+            font-size: 19px;
+        }
+
+        .university {
+            color: var(--blue);
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .education-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* Thesis */
+
+        .thesis {
+            background: var(--light-blue);
+            border-radius: 8px;
+            padding: 30px;
+        }
+
+        .thesis h3 {
+            color: var(--navy);
+            margin-bottom: 12px;
+            font-size: 19px;
+        }
+
+        .thesis p {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        /* Projects */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(20,40,60,0.08);
+        }
+
+        .project-category {
+            color: var(--blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .project h3 {
+            color: var(--navy);
+            font-size: 17px;
+            margin: 12px 0;
+        }
+
+        .project p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+
+        .project-link {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Skills */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 8px 14px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        /* Contact */
+
+        .contact-box {
+            background: var(--navy);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .contact-box h2 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            color: #d5e0ea;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contact-links a {
+            color: #a9d6f5;
+            font-size: 14px;
+        }
+
         footer {
             text-align: center;
             padding: 25px;
-            background: #161b22;
-            color: #8b949e;
+            color: var(--muted);
+            font-size: 12px;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+
+        @media (max-width: 650px) {
+            .nav-content {
+                padding: 14px 0;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            section {
+                padding: 48px 0;
+            }
+
+            .contact-box {
+                padding: 25px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Amin Khademi</h1>
-    <p>Environmental Engineer | Python Developer | Researcher</p>
-    <p>Atmospheric Modelling | Methane Emissions | Scientific Computing</p>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#skills">Skills</a>
-        <a href="https://github.com/Amin-Khademi-UT" target="_blank">GitHub</a>
-    </nav>
+<nav>
+    <div class="container nav-content">
+        <a href="#home" class="logo">Amin Khademi</a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="hero" id="home">
+    <div class="container">
+        <div class="hero-label">Academic & Research Portfolio</div>
+
+        <h1>Amin Khademi</h1>
+
+        <h2>Environmental Engineer | Atmospheric Science Researcher</h2>
+
+        <p>
+            MSc Environmental Engineering graduate from the University
+            of Tehran, with research interests in atmospheric dispersion
+            modelling, greenhouse gas emissions, air pollution,
+            satellite remote sensing and computational environmental science.
+        </p>
+
+        <div class="hero-buttons">
+            <a class="btn btn-primary" href="#projects">
+                Explore Research Projects
+            </a>
+
+            <a class="btn btn-outline"
+               href="https://github.com/Amin-Khademi-UT"
+               target="_blank" rel="noopener">
+                GitHub Profile
+            </a>
+        </div>
+    </div>
 </header>
 
 <main>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am an Environmental Engineer with an MSc background in
-            Air Pollution Engineering. My research interests include
-            atmospheric dispersion modelling, methane emission estimation,
-            satellite-based observations and computational environmental science.
-        </p>
-    </section>
 
-    <section id="research">
-        <h2>Research & Projects</h2>
-        <div class="project">
-            <h3>Environmental Modelling & Python Projects</h3>
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">
+            Academic background and research profile
+        </p>
+
+        <p class="about-text">
+            I am an Environmental Engineer with an MSc in Environmental
+            Engineering (Air Pollution) from the University of Tehran.
+            My academic and research experience focuses on understanding
+            atmospheric processes and environmental pollution through
+            mathematical modelling, computational methods and observational
+            data analysis.
+
+            <br><br>
+
+            My work combines environmental engineering with scientific
+            programming, with particular interests in greenhouse gas
+            emissions, atmospheric dispersion, satellite observations,
+            air quality assessment and machine learning applications
+            in environmental research.
+        </p>
+    </div>
+</section>
+
+<section id="research">
+    <div class="container">
+        <h2 class="section-title">Research Interests</h2>
+        <p class="section-subtitle">Key scientific areas of interest</p>
+
+        <div class="interests">
+
+            <div class="interest">
+                <h3>Atmospheric Dispersion Modelling</h3>
+                <p>
+                    Mathematical and computational modelling of pollutant
+                    transport, dispersion and atmospheric behaviour.
+                </p>
+            </div>
+
+            <div class="interest">
+                <h3>Greenhouse Gas Emissions</h3>
+                <p>
+                    Methane emission estimation, landfill emissions
+                    and atmospheric greenhouse gas assessment.
+                </p>
+            </div>
+
+            <div class="interest">
+                <h3>Remote Sensing</h3>
+                <p>
+                    Satellite-based environmental observations,
+                    atmospheric data analysis and validation.
+                </p>
+            </div>
+
+            <div class="interest">
+                <h3>Computational Environmental Science</h3>
+                <p>
+                    Scientific programming, numerical modelling,
+                    machine learning and surrogate modelling.
+                </p>
+            </div>
+
+            <div class="interest">
+                <h3>Air Quality Assessment</h3>
+                <p>
+                    Atmospheric pollution modelling, exposure
+                    assessment and environmental risk analysis.
+                </p>
+            </div>
+
+            <div class="interest">
+                <h3>Environmental Data Science</h3>
+                <p>
+                    Statistical analysis, predictive modelling
+                    and data-driven environmental research.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="education">
+    <div class="container">
+        <h2 class="section-title">Academic Background</h2>
+        <p class="section-subtitle">Education</p>
+
+        <div class="education-card">
+            <h3>MSc in Environmental Engineering</h3>
+            <div class="university">University of Tehran, Iran</div>
+            <p>Specialisation: Air Pollution Engineering</p>
             <p>
-                Computational projects involving atmospheric dispersion,
-                methane emissions, scientific modelling and data analysis.
+                Graduate research focused on methane emissions,
+                atmospheric dispersion modelling and environmental
+                data analysis.
             </p>
-            <a href="https://github.com/Amin-Khademi-UT">
-                Explore Projects →
+        </div>
+    </div>
+</section>
+
+<section id="thesis">
+    <div class="container">
+        <h2 class="section-title">MSc Research</h2>
+        <p class="section-subtitle">
+            Graduate research and computational methods
+        </p>
+
+        <div class="thesis">
+            <h3>Methane Emission Estimation and Atmospheric Modelling</h3>
+
+            <p>
+                My MSc research investigated methane emissions from
+                landfill sites using environmental modelling,
+                satellite observations and computational analysis.
+            </p>
+
+            <p>
+                The research involved atmospheric dispersion modelling,
+                evaluation of methane emission estimation approaches,
+                comparison with satellite-based observations and
+                exploration of data-driven forecasting methods.
+            </p>
+
+            <p>
+                Relevant methods and tools included AERMOD,
+                EPA LandGEM, satellite observations and Python-based
+                analysis.
+            </p>
+
+            <a href="https://github.com/Amin-Khademi-UT/Methane-Prediction"
+               target="_blank" rel="noopener">
+                View Research Repository →
             </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <span class="tag">Python</span>
-        <span class="tag">Atmospheric Dispersion Modelling</span>
-        <span class="tag">Methane Emissions</span>
-        <span class="tag">Scientific Computing</span>
-        <span class="tag">Data Analysis</span>
-        <span class="tag">Environmental Engineering</span>
-    </section>
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">Research & Computational Projects</h2>
+        <p class="section-subtitle">
+            Selected scientific computing and environmental engineering projects
+        </p>
+
+        <div class="projects">
+
+            <article class="project">
+                <div class="project-category">Methane Research</div>
+                <h3>Methane Emission Prediction</h3>
+                <p>
+                    A computational framework for methane emission estimation,
+                    atmospheric dispersion modelling, satellite observation
+                    validation and machine learning-based landfill methane
+                    forecasting.
+                </p>
+                <a class="project-link"
+                   href="https://github.com/Amin-Khademi-UT/Methane-Prediction"
+                   target="_blank" rel="noopener">
+                    View Project →
+                </a>
+            </article>
+
+            <article class="project">
+                <div class="project-category">Atmospheric Modelling</div>
+                <h3>Gaussian Plume Dispersion Model</h3>
+                <p>
+                    A Python implementation of the Gaussian plume model
+                    for estimating air pollutant concentrations at different
+                    distances from a point emission source.
+                </p>
+                <a class="project-link"
+                   href="https://github.com/Amin-Khademi-UT/Plume_Model"
+                   target="_blank" rel="noopener">
+                    View Project →
+                </a>
+            </article>
+
+            <article class="project">
+                <div class="project-category">Surrogate Modelling & Machine Learning</div>
+                <h3>Gaussian Process Emulator</h3>
+                <p>
+                    A configurable Gaussian Process Regression framework
+                    for emulating atmospheric dispersion models and
+                    comparing alternative sampling strategies.
+                </p>
+                <a class="project-link"
+                   href="https://github.com/Amin-Khademi-UT/Configurable-Gaussian-Process-Emulator-for-Atmospheric-Dispersion-Modelling"
+                   target="_blank" rel="noopener">
+                    View Project →
+                </a>
+            </article>
+
+            <article class="project">
+                <div class="project-category">Environmental Risk Assessment</div>
+                <h3>BTEX Inhalation Risk Calculator</h3>
+                <p>
+                    A configurable environmental health risk assessment
+                    tool based on EPA RAGS Part F and RAIS methodologies,
+                    including Monte Carlo uncertainty analysis.
+                </p>
+                <a class="project-link"
+                   href="https://github.com/Amin-Khademi-UT/BTEX_RISK_Calculator"
+                   target="_blank" rel="noopener">
+                    View Project →
+                </a>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">
+            Research tools and computational methods
+        </p>
+
+        <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">Atmospheric Dispersion Modelling</span>
+            <span class="skill">AERMOD</span>
+            <span class="skill">CALPUFF</span>
+            <span class="skill">ArcGIS Pro</span>
+            <span class="skill">Google Earth Engine</span>
+            <span class="skill">Remote Sensing</span>
+            <span class="skill">Gaussian Process Regression</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Scientific Computing</span>
+            <span class="skill">Environmental Data Analysis</span>
+            <span class="skill">Air Quality Assessment</span>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="contact-box">
+            <h2>Academic Collaboration & Contact</h2>
+
+            <p>
+                I welcome academic connections and research discussions
+                in atmospheric science, environmental engineering,
+                air quality and computational environmental modelling.
+            </p>
+
+            <div class="contact-links">
+                <a href="https://github.com/Amin-Khademi-UT"
+                   target="_blank" rel="noopener">GitHub</a>
+
+                <a href="https://www.linkedin.com/in/amin-khademi/"
+                   target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 </main>
 
 <footer>
-    <p>© 2026 Amin Khademi | Research & Engineering Portfolio</p>
-    <a href="https://github.com/Amin-Khademi-UT">GitHub Profile</a>
+    <p>© 2026 Amin Khademi | Academic & Research Portfolio</p>
+    <p>Environmental Engineering | University of Tehran</p>
 </footer>
 
 </body>
